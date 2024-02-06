@@ -158,7 +158,7 @@ See unit tests in [`test/multi-caching.test.ts`](./test/multi-caching.test.ts) f
 ### Refresh cache keys in background
 
 Both the `caching` and `multicaching` modules support a mechanism to refresh expiring cache keys in background when using the `wrap` function.  
-This is done by adding a `refreshThreshold` attribute while creating the caching store.
+This is done by adding a `refreshThreshold` attribute while creating the caching store or passing it to the `wrap` function.
 
 If `refreshThreshold` is set and after retrieving a value from cache the TTL will be checked.  
 If the remaining TTL is less than `refreshThreshold`, the system will update the value asynchronously,  
@@ -216,6 +216,8 @@ When a value will be retrieved from Redis with a TTL minor than 3sec, the value 
 - [node-cache-manager-couchbase](https://github.com/davidepellegatta/node-cache-manager-couchbase)
 
 - [node-cache-manager-sqlite](https://github.com/maxpert/node-cache-manager-sqlite)
+
+- [@resolid/cache-manager-sqlite](https://github.com/huijiewei/cache-manager-sqlite) (uses [better-sqlite3](https://github.com/WiseLibs/better-sqlite3))
 
 ## Contribute
 
